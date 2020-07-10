@@ -24,11 +24,14 @@ public class CabInvoiceGeneratorTest {
     }
 
     @Test
-    public void givenInvoiceGenerator_ForMultipleRides_ShouldReturnAggregateFare() {
+    public void givenInvoiceGenerator_ShouldReturnInvoiceSummary() {
         CabInvoiceGenerator cabInvoiceGenerator = new CabInvoiceGenerator();
-        Ride[] rides = {new Ride(5.0, 5), new Ride(0.1, 2)};
-        double totalFare = cabInvoiceGenerator.totalFare(rides);
-        Assert.assertEquals(60, totalFare, 0.0);
+        Ride[] rides = {
+                new Ride(5.0, 5),
+                new Ride(0.1, 2)
+        };
+        InvoiceSummary invoiceSummary = cabInvoiceGenerator.totalFare(rides);
+        InvoiceSummary invoiceSummaryExpected = new InvoiceSummary(2, 60.0);
+        Assert.assertEquals(invoiceSummaryExpected, invoiceSummary);
     }
-
 }
