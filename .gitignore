@@ -26,7 +26,9 @@ hs_err_pid*
 
 .idea
 *.bin
-*.properties*
-*.gradle
-gradlew.bat
+*.properties
+*.lock
+build.gradle
 gradlew
+gradlew.bat
+settings.gradle
