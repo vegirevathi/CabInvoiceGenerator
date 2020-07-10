@@ -11,8 +11,7 @@ public class CabInvoiceGeneratorTest {
         double distance = 5.0;
         int time = 5;
         double totalFare = cabInvoiceGenerator.totalFare(distance, time);
-        Assert.assertEquals(55,totalFare,0.0);
-
+        Assert.assertEquals(55, totalFare, 0.0);
     }
 
     @Test
@@ -21,7 +20,15 @@ public class CabInvoiceGeneratorTest {
         double distance = 0.1;
         int time = 2;
         double totalFare = cabInvoiceGenerator.totalFare(distance, time);
-        Assert.assertEquals(5,totalFare,0.0);
-
+        Assert.assertEquals(5, totalFare, 0.0);
     }
+
+    @Test
+    public void givenInvoiceGenerator_ForMultipleRides_ShouldReturnAggregateFare() {
+        CabInvoiceGenerator cabInvoiceGenerator = new CabInvoiceGenerator();
+        Ride[] rides = {new Ride(5.0, 5), new Ride(0.1, 2)};
+        double totalFare = cabInvoiceGenerator.totalFare(rides);
+        Assert.assertEquals(60, totalFare, 0.0);
+    }
+
 }
