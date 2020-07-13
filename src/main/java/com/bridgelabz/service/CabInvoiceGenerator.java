@@ -1,4 +1,9 @@
-package com.bridgelabz;
+package com.bridgelabz.service;
+
+import com.bridgelabz.utility.CabCategory;
+import com.bridgelabz.repository.RideRepository;
+import com.bridgelabz.model.InvoiceSummary;
+import com.bridgelabz.model.Ride;
 
 public class CabInvoiceGenerator {
 

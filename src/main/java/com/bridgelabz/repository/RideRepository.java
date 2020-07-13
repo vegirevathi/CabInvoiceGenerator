@@ -1,4 +1,6 @@
-package com.bridgelabz;
+package com.bridgelabz.repository;
+
+import com.bridgelabz.model.Ride;
 
 import java.util.ArrayList;
 import java.util.Arrays;

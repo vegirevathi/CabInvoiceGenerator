@@ -1,4 +1,4 @@
-package com.bridgelabz;
+package com.bridgelabz.utility;
 
 public enum CabCategory {
     PREMIUM(2, 15.0, 20.0),
